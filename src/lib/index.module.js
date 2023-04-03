@@ -20,6 +20,8 @@ import { RadioButtonItem } from './directives/radio-button-item/radio-button-ite
 import { RadioButtonView } from './directives/radio-button-item/radio-button-view.directive'
 import { SelectView } from './directives/select-item/select-view.directive'
 import { SelectItem } from './directives/select-item/select-item.directive'
+import { DateView } from './directives/date-item/date-view.directive'
+import { DateItem } from './directives/date-item/date-item.directive'
 import { TextareaItem } from './directives/textarea-item/textarea-item.directive'
 import { TextareaView } from './directives/textarea-item/textarea-view.directive'
 
@@ -30,25 +32,27 @@ export default angular
     'ngMessages',
   ])
   .service('Utils', Utils)
-  .controller('MainController', MainController)
-  .directive('uploadItem', UploadItem)
-  .directive('uploadView', UploadView)
-  .directive('agreementItem', AgreementItem)
-  .directive('agreementView', AgreementView)
-  .directive('checkboxesItem', CheckboxesItem)
-  .directive('checkboxesView', CheckboxesView)
-  .directive('formItem', FormItem)
-  .directive('formItemsContainer', FormItemsContainer)
-  .directive('formView', FormView)
-  .directive('inputItem', InputItem)
-  .directive('inputView', InputView)
-  .directive('labelItem', LabelItem)
-  .directive('labelView', LabelView)
-  .directive('matrixItem', MatrixItem)
-  .directive('matrixView', MatrixView)
-  .directive('radioButtonItem', RadioButtonItem)
-  .directive('radioButtonView', RadioButtonView)
-  .directive('selectItem', SelectItem)
-  .directive('selectView', SelectView)
-  .directive('textareaItem', TextareaItem)
-  .directive('textareaView', TextareaView)
+  .controller('MainController', () => new MainController())
+  .directive('uploadItem', () => new UploadItem())
+  .directive('uploadView', () => new UploadView())
+  .directive('agreementItem', () => new AgreementItem())
+  .directive('agreementView', () => new AgreementView())
+  .directive('checkboxesItem', () => new CheckboxesItem())
+  .directive('checkboxesView', () => new CheckboxesView())
+  .directive('formItem', () => new FormItem())
+  .directive('formItemsContainer', () => new FormItemsContainer())
+  .directive('formView', () => new FormView())
+  .directive('inputItem', () => new InputItem())
+  .directive('inputView', () => new InputView())
+  .directive('labelItem', () => new LabelItem())
+  .directive('labelView', () => new LabelView())
+  .directive('matrixItem', () => new MatrixItem())
+  .directive('matrixView', () => new MatrixView())
+  .directive('radioButtonItem', () => new RadioButtonItem())
+  .directive('radioButtonView', () => new RadioButtonView())
+  .directive('selectItem', () => new SelectItem())
+  .directive('selectView', () => new SelectView())
+  .directive('dateItem', () => new DateItem())
+  .directive('dateView', () => new DateView())
+  .directive('textareaItem', () => new TextareaItem())
+  .directive('textareaView', () => new TextareaView())
