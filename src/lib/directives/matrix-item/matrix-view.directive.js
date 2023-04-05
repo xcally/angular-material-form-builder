@@ -38,6 +38,13 @@ class MatrixView {
       ctrl.init()
     }, 50)
   }
+
+  static directiveFactory($timeout) {
+    MatrixView.instance = new MatrixView($timeout)
+    return MatrixView.instance
+  }
 }
+
+MatrixView.directiveFactory.$inject = ['$timeout']
 
 export { MatrixView }

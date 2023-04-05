@@ -36,6 +36,13 @@ class InputView {
       ctrl.init()
     }, 50)
   }
+
+  static directiveFactory($timeout) {
+    InputView.instance = new InputView($timeout)
+    return InputView.instance
+  }
 }
+
+InputView.directiveFactory.$inject = ['$timeout']
 
 export { InputView }

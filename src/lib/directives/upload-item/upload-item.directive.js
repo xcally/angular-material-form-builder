@@ -18,6 +18,11 @@ class UploadItem {
     this.controllerAs = 'Upload'
     this.bindToController = true
   }
+
+  static directiveFactory() {
+    UploadItem.instance = new UploadItem()
+    return UploadItem.instance
+  }
 }
 
 export { UploadItem }

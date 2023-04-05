@@ -36,6 +36,13 @@ class DateView {
       ctrl.init()
     }, 50)
   }
+
+  static directiveFactory($timeout) {
+    DateView.instance = new DateView($timeout)
+    return DateView.instance
+  }
 }
+
+DateView.directiveFactory.$inject = ['$timeout']
 
 export { DateView }

@@ -38,6 +38,13 @@ class SelectView {
       ctrl.init()
     }, 50)
   }
+
+  static directiveFactory($timeout) {
+    SelectView.instance = new SelectView($timeout)
+    return SelectView.instance
+  }
 }
+
+SelectView.directiveFactory.$inject = ['$timeout']
 
 export { SelectView }

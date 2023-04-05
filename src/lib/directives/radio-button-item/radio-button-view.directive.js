@@ -34,6 +34,13 @@ class RadioButtonView {
       ctrl.init()
     }, 50)
   }
+
+  static directiveFactory($timeout) {
+    RadioButtonView.instance = new RadioButtonView($timeout)
+    return RadioButtonView.instance
+  }
 }
+
+RadioButtonView.directiveFactory.$inject = ['$timeout']
 
 export { RadioButtonView }

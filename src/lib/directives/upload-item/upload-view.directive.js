@@ -73,6 +73,13 @@ class UploadView {
       })
     })
   }
+
+  static directiveFactory($timeout) {
+    UploadView.instance = new UploadView($timeout)
+    return UploadView.instance
+  }
 }
+
+UploadView.directiveFactory.$inject = ['$timeout']
 
 export { UploadView }

@@ -15,6 +15,11 @@ class LabelItem {
     this.controllerAs = 'Label'
     this.bindToController = true
   }
+
+  static directiveFactory() {
+    LabelItem.instance = new LabelItem()
+    return LabelItem.instance
+  }
 }
 
 export { LabelItem }

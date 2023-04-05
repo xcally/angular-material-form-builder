@@ -18,6 +18,11 @@ class TextareaItem {
     this.controllerAs = 'Textarea'
     this.bindToController = true
   }
+
+  static directiveFactory() {
+    TextareaItem.instance = new TextareaItem()
+    return TextareaItem.instance
+  }
 }
 
 export { TextareaItem }

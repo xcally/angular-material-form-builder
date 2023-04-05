@@ -19,6 +19,11 @@ class RadioButtonItem {
     this.controllerAs = 'RadioButton'
     this.bindToController = true
   }
+
+  static directiveFactory() {
+    RadioButtonItem.instance = new RadioButtonItem()
+    return RadioButtonItem.instance
+  }
 }
 
 export { RadioButtonItem }

@@ -58,11 +58,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AgreementItem": () => (/* binding */ AgreementItem)
 /* harmony export */ });
 /* harmony import */ var _agreement_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agreement-item.controller */ "./src/lib/directives/agreement-item/agreement-item.controller.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
  // import AgreementItemTemplate from './agreement-item.tpl.html'
 
@@ -70,21 +70,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @implements {ng.IDirective}
  */
 
-var AgreementItem = /*#__PURE__*/_createClass(
-/**
- * @ngInject
- */
-function AgreementItem() {
-  _classCallCheck(this, AgreementItem);
+var AgreementItem = /*#__PURE__*/function () {
+  /**
+   * @ngInject
+   */
+  function AgreementItem() {
+    _classCallCheck(this, AgreementItem);
 
-  this.restrict = 'E';
-  this.scope = {
-    item: '='
-  };
-  this.controller = _agreement_item_controller__WEBPACK_IMPORTED_MODULE_0__.AgreementItemCtrl;
-  this.controllerAs = 'Agreement';
-  this.bindToController = true;
-});
+    this.restrict = 'E';
+    this.scope = {
+      item: '='
+    };
+    this.controller = _agreement_item_controller__WEBPACK_IMPORTED_MODULE_0__.AgreementItemCtrl;
+    this.controllerAs = 'Agreement';
+    this.bindToController = true;
+  }
+
+  _createClass(AgreementItem, null, [{
+    key: "directiveFactory",
+    value: function directiveFactory() {
+      AgreementItem.instance = new AgreementItem();
+      return AgreementItem.instance;
+    }
+  }]);
+
+  return AgreementItem;
+}();
 
 
 
@@ -265,11 +276,18 @@ var AgreementView = /*#__PURE__*/function () {
         ctrl.init();
       }, 50);
     }
+  }], [{
+    key: "directiveFactory",
+    value: function directiveFactory($timeout) {
+      AgreementView.instance = new AgreementView($timeout);
+      return AgreementView.instance;
+    }
   }]);
 
   return AgreementView;
 }();
 
+AgreementView.directiveFactory.$inject = ['$timeout'];
 
 
 /***/ }),
@@ -556,11 +574,18 @@ var CheckboxesView = /*#__PURE__*/function () {
         ctrl.init();
       }, 50);
     }
+  }], [{
+    key: "directiveFactory",
+    value: function directiveFactory($timeout) {
+      CheckboxesView.instance = new CheckboxesView($timeout);
+      return CheckboxesView.instance;
+    }
   }]);
 
   return CheckboxesView;
 }();
 
+CheckboxesView.directiveFactory.$inject = ['$timeout'];
 
 
 /***/ }),
@@ -614,11 +639,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _date_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date-item.controller */ "./src/lib/directives/date-item/date-item.controller.js");
 /* harmony import */ var _date_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./date-item.tpl.html */ "./src/lib/directives/date-item/date-item.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
 
@@ -626,22 +651,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @implements {ng.IDirective}
  */
 
-var DateItem = /*#__PURE__*/_createClass(
-/**
- * @ngInject
- */
-function DateItem() {
-  _classCallCheck(this, DateItem);
+var DateItem = /*#__PURE__*/function () {
+  /**
+   * @ngInject
+   */
+  function DateItem() {
+    _classCallCheck(this, DateItem);
 
-  this.restrict = 'E';
-  this.template = _date_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
-  this.scope = {
-    item: '='
-  };
-  this.controller = _date_item_controller__WEBPACK_IMPORTED_MODULE_0__.DateItemCtrl;
-  this.controllerAs = 'Date';
-  this.bindToController = true;
-});
+    this.restrict = 'E';
+    this.template = _date_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+    this.scope = {
+      item: '='
+    };
+    this.controller = _date_item_controller__WEBPACK_IMPORTED_MODULE_0__.DateItemCtrl;
+    this.controllerAs = 'Date';
+    this.bindToController = true;
+  }
+
+  _createClass(DateItem, null, [{
+    key: "directiveFactory",
+    value: function directiveFactory() {
+      DateItem.instance = new DateItem();
+      return DateItem.instance;
+    }
+  }]);
+
+  return DateItem;
+}();
 
 
 
@@ -756,11 +792,18 @@ var DateView = /*#__PURE__*/function () {
         ctrl.init();
       }, 50);
     }
+  }], [{
+    key: "directiveFactory",
+    value: function directiveFactory($timeout) {
+      DateView.instance = new DateView($timeout);
+      return DateView.instance;
+    }
   }]);
 
   return DateView;
 }();
 
+DateView.directiveFactory.$inject = ['$timeout'];
 
 
 /***/ }),
@@ -937,11 +980,18 @@ var FormItem = /*#__PURE__*/function () {
       ctrl.init();
       return el;
     }
+  }], [{
+    key: "directiveFactory",
+    value: function directiveFactory($compile) {
+      FormItem.instance = new FormItem($compile);
+      return FormItem.instance;
+    }
   }]);
 
   return FormItem;
 }();
 
+FormItem.directiveFactory.$inject = ['$compile'];
 
 
 /***/ }),
@@ -1039,11 +1089,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _form_items_container_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-items-container.controller */ "./src/lib/directives/form-items-container/form-items-container.controller.js");
 /* harmony import */ var _form_items_container_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-items-container.tpl.html */ "./src/lib/directives/form-items-container/form-items-container.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
 
@@ -1051,22 +1101,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @implements {ng.IDirective}
  */
 
-var FormItemsContainer = /*#__PURE__*/_createClass(
-/**
- * @ngInject
- */
-function FormItemsContainer() {
-  _classCallCheck(this, FormItemsContainer);
+var FormItemsContainer = /*#__PURE__*/function () {
+  /**
+   * @ngInject
+   */
+  function FormItemsContainer() {
+    _classCallCheck(this, FormItemsContainer);
 
-  this.restrict = 'E';
-  this.scope = {
-    form: '='
-  };
-  this.template = _form_items_container_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
-  this.controller = _form_items_container_controller__WEBPACK_IMPORTED_MODULE_0__.FormItemsContainerCtrl;
-  this.controllerAs = 'container';
-  this.bindToController = true;
-});
+    this.restrict = 'E';
+    this.scope = {
+      form: '='
+    };
+    this.template = _form_items_container_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+    this.controller = _form_items_container_controller__WEBPACK_IMPORTED_MODULE_0__.FormItemsContainerCtrl;
+    this.controllerAs = 'container';
+    this.bindToController = true;
+  }
+
+  _createClass(FormItemsContainer, null, [{
+    key: "directiveFactory",
+    value: function directiveFactory() {
+      FormItemsContainer.instance = new FormItemsContainer();
+      return FormItemsContainer.instance;
+    }
+  }]);
+
+  return FormItemsContainer;
+}();
 
 
 
@@ -1168,6 +1229,12 @@ var FormView = /*#__PURE__*/function () {
     value: function link(scope, element, attrs, ctrl) {
       ctrl.init();
     }
+  }], [{
+    key: "directiveFactory",
+    value: function directiveFactory() {
+      FormView.instance = new FormView();
+      return FormView.instance;
+    }
   }]);
 
   return FormView;
@@ -1226,11 +1293,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _input_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./input-item.controller */ "./src/lib/directives/input-item/input-item.controller.js");
 /* harmony import */ var _input_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input-item.tpl.html */ "./src/lib/directives/input-item/input-item.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
 
@@ -1238,22 +1305,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @implements {ng.IDirective}
  */
 
-var InputItem = /*#__PURE__*/_createClass(
-/**
- * @ngInject
- */
-function InputItem() {
-  _classCallCheck(this, InputItem);
+var InputItem = /*#__PURE__*/function () {
+  /**
+   * @ngInject
+   */
+  function InputItem() {
+    _classCallCheck(this, InputItem);
 
-  this.restrict = 'E';
-  this.template = _input_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
-  this.scope = {
-    item: '='
-  };
-  this.controller = _input_item_controller__WEBPACK_IMPORTED_MODULE_0__.InputItemCtrl;
-  this.controllerAs = 'Input';
-  this.bindToController = true;
-});
+    this.restrict = 'E';
+    this.template = _input_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+    this.scope = {
+      item: '='
+    };
+    this.controller = _input_item_controller__WEBPACK_IMPORTED_MODULE_0__.InputItemCtrl;
+    this.controllerAs = 'Input';
+    this.bindToController = true;
+  }
+
+  _createClass(InputItem, null, [{
+    key: "directiveFactory",
+    value: function directiveFactory() {
+      InputItem.instance = new InputItem();
+      return InputItem.instance;
+    }
+  }]);
+
+  return InputItem;
+}();
 
 
 
@@ -1368,11 +1446,18 @@ var InputView = /*#__PURE__*/function () {
         ctrl.init();
       }, 50);
     }
+  }], [{
+    key: "directiveFactory",
+    value: function directiveFactory($timeout) {
+      InputView.instance = new InputView($timeout);
+      return InputView.instance;
+    }
   }]);
 
   return InputView;
 }();
 
+InputView.directiveFactory.$inject = ['$timeout'];
 
 
 /***/ }),
@@ -1420,11 +1505,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _label_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./label-item.controller */ "./src/lib/directives/label-item/label-item.controller.js");
 /* harmony import */ var _label_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./label-item.tpl.html */ "./src/lib/directives/label-item/label-item.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
 
@@ -1432,18 +1517,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @implements {ng.IDirective}
  */
 
-var LabelItem = /*#__PURE__*/_createClass(function LabelItem() {
-  _classCallCheck(this, LabelItem);
+var LabelItem = /*#__PURE__*/function () {
+  function LabelItem() {
+    _classCallCheck(this, LabelItem);
 
-  this.restrict = 'E';
-  this.template = _label_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
-  this.scope = {
-    item: '='
-  };
-  this.controller = _label_item_controller__WEBPACK_IMPORTED_MODULE_0__.LabelItemCtrl;
-  this.controllerAs = 'Label';
-  this.bindToController = true;
-});
+    this.restrict = 'E';
+    this.template = _label_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+    this.scope = {
+      item: '='
+    };
+    this.controller = _label_item_controller__WEBPACK_IMPORTED_MODULE_0__.LabelItemCtrl;
+    this.controllerAs = 'Label';
+    this.bindToController = true;
+  }
+
+  _createClass(LabelItem, null, [{
+    key: "directiveFactory",
+    value: function directiveFactory() {
+      LabelItem.instance = new LabelItem();
+      return LabelItem.instance;
+    }
+  }]);
+
+  return LabelItem;
+}();
 
 
 
@@ -1562,11 +1659,18 @@ var LabelView = /*#__PURE__*/function () {
         ctrl.init();
       }, 50);
     }
+  }], [{
+    key: "directiveFactory",
+    value: function directiveFactory($timeout) {
+      LabelView.instance = new LabelView($timeout);
+      return LabelView.instance;
+    }
   }]);
 
   return LabelView;
 }();
 
+LabelView.directiveFactory.$inject = ['$timeout'];
 
 
 /***/ }),
@@ -1680,11 +1784,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _matrix_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./matrix-item.controller */ "./src/lib/directives/matrix-item/matrix-item.controller.js");
 /* harmony import */ var _matrix_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./matrix-item.tpl.html */ "./src/lib/directives/matrix-item/matrix-item.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
 
@@ -1692,22 +1796,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @implements {ng.IDirective}
  */
 
-var MatrixItem = /*#__PURE__*/_createClass(
-/**
- * @ngInject
- */
-function MatrixItem() {
-  _classCallCheck(this, MatrixItem);
+var MatrixItem = /*#__PURE__*/function () {
+  /**
+   * @ngInject
+   */
+  function MatrixItem() {
+    _classCallCheck(this, MatrixItem);
 
-  this.restrict = 'E';
-  this.template = _matrix_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
-  this.scope = {
-    item: '='
-  };
-  this.controller = _matrix_item_controller__WEBPACK_IMPORTED_MODULE_0__.MatrixItemCtrl;
-  this.controllerAs = 'Matrix';
-  this.bindToController = true;
-});
+    this.restrict = 'E';
+    this.template = _matrix_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+    this.scope = {
+      item: '='
+    };
+    this.controller = _matrix_item_controller__WEBPACK_IMPORTED_MODULE_0__.MatrixItemCtrl;
+    this.controllerAs = 'Matrix';
+    this.bindToController = true;
+  }
+
+  _createClass(MatrixItem, null, [{
+    key: "directiveFactory",
+    value: function directiveFactory() {
+      MatrixItem.instance = new MatrixItem();
+      return MatrixItem.instance;
+    }
+  }]);
+
+  return MatrixItem;
+}();
 
 
 
@@ -1865,11 +1980,18 @@ var MatrixView = /*#__PURE__*/function () {
         ctrl.init();
       }, 50);
     }
+  }], [{
+    key: "directiveFactory",
+    value: function directiveFactory($timeout) {
+      MatrixView.instance = new MatrixView($timeout);
+      return MatrixView.instance;
+    }
   }]);
 
   return MatrixView;
 }();
 
+MatrixView.directiveFactory.$inject = ['$timeout'];
 
 
 /***/ }),
@@ -1951,11 +2073,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _radio_button_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio-button-item.controller */ "./src/lib/directives/radio-button-item/radio-button-item.controller.js");
 /* harmony import */ var _radio_button_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./radio-button-item.tpl.html */ "./src/lib/directives/radio-button-item/radio-button-item.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
 
@@ -1963,22 +2085,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @implements {ng.IDirective}
  */
 
-var RadioButtonItem = /*#__PURE__*/_createClass(
-/**
- * @ngInject
- */
-function RadioButtonItem() {
-  _classCallCheck(this, RadioButtonItem);
+var RadioButtonItem = /*#__PURE__*/function () {
+  /**
+   * @ngInject
+   */
+  function RadioButtonItem() {
+    _classCallCheck(this, RadioButtonItem);
 
-  this.restrict = 'E';
-  this.template = _radio_button_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
-  this.scope = {
-    item: '='
-  };
-  this.controller = _radio_button_item_controller__WEBPACK_IMPORTED_MODULE_0__.RadioButtonItemCtrl;
-  this.controllerAs = 'RadioButton';
-  this.bindToController = true;
-});
+    this.restrict = 'E';
+    this.template = _radio_button_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+    this.scope = {
+      item: '='
+    };
+    this.controller = _radio_button_item_controller__WEBPACK_IMPORTED_MODULE_0__.RadioButtonItemCtrl;
+    this.controllerAs = 'RadioButton';
+    this.bindToController = true;
+  }
+
+  _createClass(RadioButtonItem, null, [{
+    key: "directiveFactory",
+    value: function directiveFactory() {
+      RadioButtonItem.instance = new RadioButtonItem();
+      return RadioButtonItem.instance;
+    }
+  }]);
+
+  return RadioButtonItem;
+}();
 
 
 
@@ -2092,11 +2225,18 @@ var RadioButtonView = /*#__PURE__*/function () {
         ctrl.init();
       }, 50);
     }
+  }], [{
+    key: "directiveFactory",
+    value: function directiveFactory($timeout) {
+      RadioButtonView.instance = new RadioButtonView($timeout);
+      return RadioButtonView.instance;
+    }
   }]);
 
   return RadioButtonView;
 }();
 
+RadioButtonView.directiveFactory.$inject = ['$timeout'];
 
 
 /***/ }),
@@ -2183,11 +2323,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _select_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./select-item.tpl.html */ "./src/lib/directives/select-item/select-item.tpl.html");
 /* harmony import */ var _select_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./select-item.controller */ "./src/lib/directives/select-item/select-item.controller.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
 
@@ -2195,22 +2335,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @implements {ng.IDirective}
  */
 
-var SelectItem = /*#__PURE__*/_createClass(
-/**
- * @ngInject
- */
-function SelectItem() {
-  _classCallCheck(this, SelectItem);
+var SelectItem = /*#__PURE__*/function () {
+  /**
+   * @ngInject
+   */
+  function SelectItem() {
+    _classCallCheck(this, SelectItem);
 
-  this.restrict = 'E';
-  this.template = _select_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
-  this.scope = {
-    item: '='
-  };
-  this.controller = _select_item_controller__WEBPACK_IMPORTED_MODULE_1__.SelectItemCtrl;
-  this.controllerAs = 'Select';
-  this.bindToController = true;
-});
+    this.restrict = 'E';
+    this.template = _select_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+    this.scope = {
+      item: '='
+    };
+    this.controller = _select_item_controller__WEBPACK_IMPORTED_MODULE_1__.SelectItemCtrl;
+    this.controllerAs = 'Select';
+    this.bindToController = true;
+  }
+
+  _createClass(SelectItem, null, [{
+    key: "directiveFactory",
+    value: function directiveFactory() {
+      SelectItem.instance = new SelectItem();
+      return SelectItem.instance;
+    }
+  }]);
+
+  return SelectItem;
+}();
 
 
 
@@ -2327,11 +2478,18 @@ var SelectView = /*#__PURE__*/function () {
         ctrl.init();
       }, 50);
     }
+  }], [{
+    key: "directiveFactory",
+    value: function directiveFactory($timeout) {
+      SelectView.instance = new SelectView($timeout);
+      return SelectView.instance;
+    }
   }]);
 
   return SelectView;
 }();
 
+SelectView.directiveFactory.$inject = ['$timeout'];
 
 
 /***/ }),
@@ -2383,11 +2541,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _textarea_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./textarea-item.controller */ "./src/lib/directives/textarea-item/textarea-item.controller.js");
 /* harmony import */ var _textarea_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./textarea-item.tpl.html */ "./src/lib/directives/textarea-item/textarea-item.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
 
@@ -2395,22 +2553,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @implements {ng.IDirective}
  */
 
-var TextareaItem = /*#__PURE__*/_createClass(
-/**
- * @ngInject
- */
-function TextareaItem() {
-  _classCallCheck(this, TextareaItem);
+var TextareaItem = /*#__PURE__*/function () {
+  /**
+   * @ngInject
+   */
+  function TextareaItem() {
+    _classCallCheck(this, TextareaItem);
 
-  this.restrict = 'E';
-  this.template = _textarea_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
-  this.scope = {
-    item: '='
-  };
-  this.controller = _textarea_item_controller__WEBPACK_IMPORTED_MODULE_0__.TextareaItemCtrl;
-  this.controllerAs = 'Textarea';
-  this.bindToController = true;
-});
+    this.restrict = 'E';
+    this.template = _textarea_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+    this.scope = {
+      item: '='
+    };
+    this.controller = _textarea_item_controller__WEBPACK_IMPORTED_MODULE_0__.TextareaItemCtrl;
+    this.controllerAs = 'Textarea';
+    this.bindToController = true;
+  }
+
+  _createClass(TextareaItem, null, [{
+    key: "directiveFactory",
+    value: function directiveFactory() {
+      TextareaItem.instance = new TextareaItem();
+      return TextareaItem.instance;
+    }
+  }]);
+
+  return TextareaItem;
+}();
 
 
 
@@ -2525,11 +2694,18 @@ var TextareaView = /*#__PURE__*/function () {
         ctrl.init();
       }, 50);
     }
+  }], [{
+    key: "directiveFactory",
+    value: function directiveFactory($timeout) {
+      TextareaView.instance = new TextareaView($timeout);
+      return TextareaView.instance;
+    }
   }]);
 
   return TextareaView;
 }();
 
+TextareaView.directiveFactory.$inject = ['$timeout'];
 
 
 /***/ }),
@@ -2583,11 +2759,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _upload_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./upload-item.tpl.html */ "./src/lib/directives/upload-item/upload-item.tpl.html");
 /* harmony import */ var _upload_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./upload-item.controller */ "./src/lib/directives/upload-item/upload-item.controller.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
 
@@ -2595,22 +2771,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @implements {ng.IDirective}
  */
 
-var UploadItem = /*#__PURE__*/_createClass(
-/**
- * @ngInject
- */
-function UploadItem() {
-  _classCallCheck(this, UploadItem);
+var UploadItem = /*#__PURE__*/function () {
+  /**
+   * @ngInject
+   */
+  function UploadItem() {
+    _classCallCheck(this, UploadItem);
 
-  this.restrict = 'E';
-  this.template = _upload_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
-  this.scope = {
-    item: '='
-  };
-  this.controller = _upload_item_controller__WEBPACK_IMPORTED_MODULE_1__.UploadItemCtrl;
-  this.controllerAs = 'Upload';
-  this.bindToController = true;
-});
+    this.restrict = 'E';
+    this.template = _upload_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+    this.scope = {
+      item: '='
+    };
+    this.controller = _upload_item_controller__WEBPACK_IMPORTED_MODULE_1__.UploadItemCtrl;
+    this.controllerAs = 'Upload';
+    this.bindToController = true;
+  }
+
+  _createClass(UploadItem, null, [{
+    key: "directiveFactory",
+    value: function directiveFactory() {
+      UploadItem.instance = new UploadItem();
+      return UploadItem.instance;
+    }
+  }]);
+
+  return UploadItem;
+}();
 
 
 
@@ -2838,11 +3025,18 @@ var UploadView = /*#__PURE__*/function () {
         });
       });
     }
+  }], [{
+    key: "directiveFactory",
+    value: function directiveFactory($timeout) {
+      UploadView.instance = new UploadView($timeout);
+      return UploadView.instance;
+    }
   }]);
 
   return UploadView;
 }();
 
+UploadView.directiveFactory.$inject = ['$timeout'];
 
 
 /***/ }),
@@ -3438,55 +3632,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (angular.module('angularMaterialFormBuilder', ['ngMaterial', 'angular-sortable-view', 'ngMessages']).service('Utils', _utils_utils_service__WEBPACK_IMPORTED_MODULE_6__.Utils).controller('MainController', function () {
-  return new _main_main_controller__WEBPACK_IMPORTED_MODULE_5__.MainController();
-}).directive('uploadItem', function () {
-  return new _directives_upload_item_upload_item_directive__WEBPACK_IMPORTED_MODULE_1__.UploadItem();
-}).directive('uploadView', function () {
-  return new _directives_upload_item_upload_view_directive__WEBPACK_IMPORTED_MODULE_2__.UploadView();
-}).directive('agreementItem', function () {
-  return new _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_3__.AgreementItem();
-}).directive('agreementView', function () {
-  return new _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_4__.AgreementView();
-}).directive('checkboxesItem', function () {
-  return new _directives_checkboxes_item_checkboxes_item_directive__WEBPACK_IMPORTED_MODULE_7__.CheckboxesItem();
-}).directive('checkboxesView', function () {
-  return new _directives_checkboxes_item_checkboxes_view_directive__WEBPACK_IMPORTED_MODULE_8__.CheckboxesView();
-}).directive('formItem', function () {
-  return new _directives_form_item_form_item_directive__WEBPACK_IMPORTED_MODULE_9__.FormItem();
-}).directive('formItemsContainer', function () {
-  return new _directives_form_items_container_form_items_container_directive__WEBPACK_IMPORTED_MODULE_10__.FormItemsContainer();
-}).directive('formView', function () {
-  return new _directives_form_view_form_view_directive__WEBPACK_IMPORTED_MODULE_11__.FormView();
-}).directive('inputItem', function () {
-  return new _directives_input_item_input_item_directive__WEBPACK_IMPORTED_MODULE_12__.InputItem();
-}).directive('inputView', function () {
-  return new _directives_input_item_input_view_directive__WEBPACK_IMPORTED_MODULE_13__.InputView();
-}).directive('labelItem', function () {
-  return new _directives_label_item_label_item_directive__WEBPACK_IMPORTED_MODULE_14__.LabelItem();
-}).directive('labelView', function () {
-  return new _directives_label_item_label_view_directive__WEBPACK_IMPORTED_MODULE_15__.LabelView();
-}).directive('matrixItem', function () {
-  return new _directives_matrix_item_matrix_item_directive__WEBPACK_IMPORTED_MODULE_16__.MatrixItem();
-}).directive('matrixView', function () {
-  return new _directives_matrix_item_matrix_view_directive__WEBPACK_IMPORTED_MODULE_17__.MatrixView();
-}).directive('radioButtonItem', function () {
-  return new _directives_radio_button_item_radio_button_item_directive__WEBPACK_IMPORTED_MODULE_18__.RadioButtonItem();
-}).directive('radioButtonView', function () {
-  return new _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_19__.RadioButtonView();
-}).directive('selectItem', function () {
-  return new _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_21__.SelectItem();
-}).directive('selectView', function () {
-  return new _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_20__.SelectView();
-}).directive('dateItem', function () {
-  return new _directives_date_item_date_item_directive__WEBPACK_IMPORTED_MODULE_23__.DateItem();
-}).directive('dateView', function () {
-  return new _directives_date_item_date_view_directive__WEBPACK_IMPORTED_MODULE_22__.DateView();
-}).directive('textareaItem', function () {
-  return new _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_24__.TextareaItem();
-}).directive('textareaView', function () {
-  return new _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_25__.TextareaView();
-}));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (angular.module('angularMaterialFormBuilder', ['ngMaterial', 'angular-sortable-view', 'ngMessages']).service('Utils', _utils_utils_service__WEBPACK_IMPORTED_MODULE_6__.Utils).controller('MainController', _main_main_controller__WEBPACK_IMPORTED_MODULE_5__.MainController).directive('uploadItem', _directives_upload_item_upload_item_directive__WEBPACK_IMPORTED_MODULE_1__.UploadItem.directiveFactory).directive('uploadView', _directives_upload_item_upload_view_directive__WEBPACK_IMPORTED_MODULE_2__.UploadView.directiveFactory).directive('agreementItem', _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_3__.AgreementItem.directiveFactory).directive('agreementView', _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_4__.AgreementView.directiveFactory).directive('checkboxesItem', _directives_checkboxes_item_checkboxes_item_directive__WEBPACK_IMPORTED_MODULE_7__.CheckboxesItem).directive('checkboxesView', _directives_checkboxes_item_checkboxes_view_directive__WEBPACK_IMPORTED_MODULE_8__.CheckboxesView.directiveFactory).directive('formItem', _directives_form_item_form_item_directive__WEBPACK_IMPORTED_MODULE_9__.FormItem.directiveFactory).directive('formItemsContainer', _directives_form_items_container_form_items_container_directive__WEBPACK_IMPORTED_MODULE_10__.FormItemsContainer.directiveFactory).directive('formView', _directives_form_view_form_view_directive__WEBPACK_IMPORTED_MODULE_11__.FormView.directiveFactory).directive('inputItem', _directives_input_item_input_item_directive__WEBPACK_IMPORTED_MODULE_12__.InputItem.directiveFactory).directive('inputView', _directives_input_item_input_view_directive__WEBPACK_IMPORTED_MODULE_13__.InputView.directiveFactory).directive('labelItem', _directives_label_item_label_item_directive__WEBPACK_IMPORTED_MODULE_14__.LabelItem.directiveFactory).directive('labelView', _directives_label_item_label_view_directive__WEBPACK_IMPORTED_MODULE_15__.LabelView.directiveFactory).directive('matrixItem', _directives_matrix_item_matrix_item_directive__WEBPACK_IMPORTED_MODULE_16__.MatrixItem.directiveFactory).directive('matrixView', _directives_matrix_item_matrix_view_directive__WEBPACK_IMPORTED_MODULE_17__.MatrixView.directiveFactory).directive('radioButtonItem', _directives_radio_button_item_radio_button_item_directive__WEBPACK_IMPORTED_MODULE_18__.RadioButtonItem.directiveFactory).directive('radioButtonView', _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_19__.RadioButtonView.directiveFactory).directive('selectItem', _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_21__.SelectItem.directiveFactory).directive('selectView', _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_20__.SelectView.directiveFactory).directive('dateItem', _directives_date_item_date_item_directive__WEBPACK_IMPORTED_MODULE_23__.DateItem.directiveFactory).directive('dateView', _directives_date_item_date_view_directive__WEBPACK_IMPORTED_MODULE_22__.DateView.directiveFactory).directive('textareaItem', _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_24__.TextareaItem.directiveFactory).directive('textareaView', _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_25__.TextareaView.directiveFactory));
 })();
 
 /******/ 	return __webpack_exports__;

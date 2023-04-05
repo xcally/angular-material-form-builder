@@ -30,6 +30,11 @@ class FormView {
   link(scope, element, attrs, ctrl) {
     ctrl.init()
   }
+
+  static directiveFactory() {
+    FormView.instance = new FormView()
+    return FormView.instance
+  }
 }
 
 export { FormView }
