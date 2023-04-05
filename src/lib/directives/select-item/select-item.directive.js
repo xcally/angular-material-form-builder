@@ -18,6 +18,11 @@ class SelectItem {
     this.controllerAs = 'Select'
     this.bindToController = true
   }
+
+  static directiveFactory() {
+    SelectItem.instance = new SelectItem()
+    return SelectItem.instance
+  }
 }
 
 export { SelectItem }

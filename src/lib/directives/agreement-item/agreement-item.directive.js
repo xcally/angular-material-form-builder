@@ -17,6 +17,11 @@ class AgreementItem {
     this.controllerAs = 'Agreement'
     this.bindToController = true
   }
+
+  static directiveFactory() {
+    AgreementItem.instance = new AgreementItem()
+    return AgreementItem.instance
+  }
 }
 
 export { AgreementItem }

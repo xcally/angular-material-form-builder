@@ -18,6 +18,11 @@ class DateItem {
     this.controllerAs = 'Date'
     this.bindToController = true
   }
+
+  static directiveFactory() {
+    DateItem.instance = new DateItem()
+    return DateItem.instance
+  }
 }
 
 export { DateItem }

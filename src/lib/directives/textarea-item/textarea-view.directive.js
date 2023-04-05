@@ -37,6 +37,13 @@ class TextareaView {
       ctrl.init()
     }, 50)
   }
+
+  static directiveFactory($timeout) {
+    TextareaView.instance = new TextareaView($timeout)
+    return TextareaView.instance
+  }
 }
+
+TextareaView.directiveFactory.$inject = ['$timeout']
 
 export { TextareaView }

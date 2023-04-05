@@ -37,6 +37,12 @@ class CheckboxesView {
       ctrl.init()
     }, 50)
   }
+  static directiveFactory($timeout) {
+    CheckboxesView.instance = new CheckboxesView($timeout)
+    return CheckboxesView.instance
+  }
 }
+
+CheckboxesView.directiveFactory.$inject = ['$timeout']
 
 export { CheckboxesView }

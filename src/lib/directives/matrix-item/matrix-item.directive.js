@@ -18,5 +18,11 @@ class MatrixItem {
     this.controllerAs = 'Matrix'
     this.bindToController = true
   }
+
+  static directiveFactory() {
+    MatrixItem.instance = new MatrixItem()
+    return MatrixItem.instance
+  }
 }
+
 export { MatrixItem }

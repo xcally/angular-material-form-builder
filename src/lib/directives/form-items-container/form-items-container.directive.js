@@ -18,6 +18,11 @@ class FormItemsContainer {
     this.controllerAs = 'container'
     this.bindToController = true
   }
+
+  static directiveFactory() {
+    FormItemsContainer.instance = new FormItemsContainer()
+    return FormItemsContainer.instance
+  }
 }
 
 export { FormItemsContainer }

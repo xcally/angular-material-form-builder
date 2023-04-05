@@ -36,6 +36,13 @@ class LabelView {
       ctrl.init()
     }, 50)
   }
+
+  static directiveFactory($timeout) {
+    LabelView.instance = new LabelView($timeout)
+    return LabelView.instance
+  }
 }
+
+LabelView.directiveFactory.$inject = ['$timeout']
 
 export { LabelView }

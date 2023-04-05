@@ -34,6 +34,13 @@ class AgreementView {
       ctrl.init()
     }, 50)
   }
+
+  static directiveFactory($timeout) {
+    AgreementView.instance = new AgreementView($timeout)
+    return AgreementView.instance
+  }
 }
+
+AgreementView.directiveFactory.$inject = ['$timeout']
 
 export { AgreementView }

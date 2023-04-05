@@ -18,6 +18,11 @@ class InputItem {
     this.controllerAs = 'Input'
     this.bindToController = true
   }
+
+  static directiveFactory() {
+    InputItem.instance = new InputItem()
+    return InputItem.instance
+  }
 }
 
 export { InputItem }

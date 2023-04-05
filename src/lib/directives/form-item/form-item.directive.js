@@ -42,5 +42,13 @@ class FormItem {
     ctrl.init()
     return el
   }
+
+  static directiveFactory($compile) {
+    FormItem.instance = new FormItem($compile)
+    return FormItem.instance
+  }
 }
+
+FormItem.directiveFactory.$inject = ['$compile']
+
 export { FormItem }
