@@ -1,5 +1,7 @@
 <md-input-container class="md-block">
   <input
+    ng-attr-max="{{DateView.formItem.config.type === 'date' ?
+  '9999-12-31' : (DateView.formItem.config.type === 'datetime-local' ? '9999-12-31T23:59' : undefined)}}"
     ng-model="DateView.formItem.value"
     type="{{DateView.formItem.config.type}}"
     ng-required="DateView.formItem.config.required"
