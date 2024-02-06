@@ -31,6 +31,7 @@ Here is the list of form items which are supported by the module:
 1.  Select
 1.  Agreement Item
 1.  Label Item
+1.  Date, Time, Datetime
 1.  Upload (manages input of type "file")
 
 ## Installation
